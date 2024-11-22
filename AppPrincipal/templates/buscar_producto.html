@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Buscar Producto{% endblock %}
+
+{% block content %}
+    <h2>Buscar Producto</h2>
+    <form method="get">
+        <input type="text" name="query" placeholder="Buscar producto">
+        <button type="submit">Buscar</button>
+    </form>
+    <ul>
+        {% for producto in resultados %}
+            <li>{{ producto.nombre }} - ${{ producto.precio }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
