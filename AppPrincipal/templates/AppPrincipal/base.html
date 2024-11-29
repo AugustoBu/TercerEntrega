@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>{% block title %}Mi Proyecto{% endblock %}</title>
+    {% load static %}
+    
+    <link rel="icon" type="image/x-icon" href="{% static 'AppPrincipal/assets/favicon.ico' %}" />
+    
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="{% static 'AppPrincipal/css/styles.css' %}">
+</head>
+<body id="page-top">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/">Mi Proyecto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/agregar-producto/">Agregar Producto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/buscar-producto/">Buscar Producto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    
+    <footer class="py-5 bg-dark">
+        <div class="container px-4 px-lg-5">
+            <p class="m-0 text-center text-white">© 2024 Mi Proyecto</p>
+        </div>
+    </footer>
+    
+    <script src="{% static 'AppPrincipal/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'AppPrincipal/js/scripts.js' %}"></script>
+</body>
+</html>

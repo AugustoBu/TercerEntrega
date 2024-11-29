@@ -3,7 +3,7 @@ from .forms import ProductoForm
 from .models import Producto
 
 def inicio(request):
-    return render(request, 'inicio.html')  
+    return render(request, 'AppPrincipal/inicio.html')  
 
 #Funcion Agregar Productos
 def agregar_producto(request):
@@ -14,7 +14,7 @@ def agregar_producto(request):
             return redirect('inicio')  
     else:
         form = ProductoForm()
-    return render(request, 'agregar_producto.html', {'form': form})  
+    return render(request, 'AppPrincipal/agregar_producto.html', {'form': form})  
 
 #Funcion Buscar Productos
 def buscar_producto(request):
@@ -22,4 +22,4 @@ def buscar_producto(request):
     resultados = []
     if query:
         resultados = Producto.objects.filter(nombre__icontains=query)
-    return render(request, 'buscar_producto.html', {'resultados': resultados})
+    return render(request, 'AppPrincipal/buscar_producto.html', {'resultados': resultados})
