@@ -13,3 +13,5 @@
    - Página de inicio: `/`
    - Agregar producto: `/agregar-producto/`
    - Buscar producto: `/buscar-producto/`
+  
+   - Guitarras agregadas, buscar como "Guitarra" y Amplificador como "Amplificador" categorizado como accesorio. 
